@@ -15,10 +15,14 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body>
-    <%= render 'home/header'%>
+  <body class="text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <%= render 'home/header'%>
+      </header>
+    </div>
     
-    <br>
+    <br><br>
     <%if notice || alert%>
     <%= render 'layouts/alerts'%>
     <%end%>

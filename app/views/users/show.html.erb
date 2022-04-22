@@ -1,0 +1,11 @@
+<div class="p-5 m-5">
+    <%if @user.profile_picture.representable?%>
+            <div >
+                <%= image_tag @user.profile_picture  ,class:"w-25"%>
+            </div>
+      <%end%> 
+  <div class="card-body">
+    <h5 class="card-title">Name : <%= @user.name %></h5>
+    <p class="card-text">Email : <%= @user.email%></p>
+  </div>
+</div>

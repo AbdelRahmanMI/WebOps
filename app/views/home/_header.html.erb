@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-light bg-light text-center text-white navbar-expand-lg fixed-top">
   <div class="container-fluid">
     <%= link_to 'WebOps' , root_path, class: "navbar-brand"%>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,6 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <% if user_signed_in?%>
+            <li class="nav-item">
+            <a href='http://localhost:3000/users/<%= current_user.id%>' class="nav-link"></i>My Profile</a>
+            </li>
             <li class="nav-item">
                 <%= link_to "Sign Out", destroy_user_session_path, method: :delete ,class:"nav-link"%>
             </li>
