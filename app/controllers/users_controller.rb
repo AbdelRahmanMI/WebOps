@@ -5,4 +5,7 @@ class UsersController < ApplicationController
     def show
         @user = User.find_by_id(params[:id])
     end
+    def your_posts
+        @posts = Post.all
+    end
 end

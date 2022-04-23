@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
   get 'users/:id', to: 'users#show', as: 'profile'
   root 'home#index'
+  post 'users/your_posts', to:'users#your_posts', as: 'your_posts'
 end
