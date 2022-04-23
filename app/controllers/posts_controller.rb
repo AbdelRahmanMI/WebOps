@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ edit update destroy ]
   before_action :authenticate_user!, only: [:new, :create, :index]
   before_action :correct_user?, only: [:edit, :update, :destroy]
   # GET /posts or /posts.json
@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -57,7 +58,7 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   def correct_user?
     @post = Post.find_by(id: params[:id])
 

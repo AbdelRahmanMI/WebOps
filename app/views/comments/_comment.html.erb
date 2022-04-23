@@ -1,0 +1,6 @@
+<article>
+    <p>
+        by: <%=User.find(comment.user_id).name%> , <%=User.find(comment.user_id).email%><br>
+        <%= comment.content %>
+    </p>
+</article>

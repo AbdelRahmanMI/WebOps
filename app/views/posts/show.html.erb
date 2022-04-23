@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
-
+<%= link_to "Destroy this post", @post, method: :delete %>
+<br>
+<%= link_to "Edit this post", edit_post_path(@post) %> 
 <%= render @post %>
+<p>
+  <strong> Comments </strong>
+  <%= render @post.comments%>
+  <%= render partial: 'comments/form', locals: {post: @post}%>
+</p>
 
 <div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", root_path %>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+  
 </div>

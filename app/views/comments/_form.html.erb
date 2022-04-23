@@ -1,0 +1,12 @@
+<%= form_with url: post_comments_url(post), method: :post do |form| %>
+     
+    <div>
+        <%= form.label :content , style: "display: block" %>
+        <%= form.text_area :content,class:"form-control" , size: '5' %>
+    </div>
+
+    <div>
+        <%= form.submit "Comment"%>
+    </div>
+
+<% end %>

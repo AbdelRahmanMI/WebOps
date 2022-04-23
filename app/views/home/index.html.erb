@@ -1,16 +1,2 @@
-<a href='http://localhost:3000/posts/new' class="btn btn-primary ">Create New Post</a>
-<br>
-<br>
-<br>
-<h2>All posts</h2>
-<br>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
 
